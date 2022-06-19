@@ -4,3 +4,6 @@ WORKDIR /app
 
 COPY ./src .
 RUN dotnet restore
+
+RUN dotnet add package FirebaseAuthentication.net
+RUN dotnet add package TweetinviAPI
