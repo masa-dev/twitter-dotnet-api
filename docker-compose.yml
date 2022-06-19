@@ -1,0 +1,14 @@
+version: '3.7'
+services:
+  dotnet_base:
+    container_name: "dotnet_base"
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+    - "50001:8080"
+    working_dir: /app/
+    tty: true
+    volumes:
+    - ./src/:/app/
+
